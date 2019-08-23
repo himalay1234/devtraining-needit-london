@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="new" max_length="40" name="new" type="string"/>
+        <element label="New Field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="lg" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="HR"/>
+                <element inactive_on_update="false" label="Legal" sequence="1" value="lg"/>
+                <element inactive_on_update="false" label="home" sequence="2" value="Hm"/>
+                <element inactive_on_update="false" label="Office" sequence="3" value="off"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="what needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="Hr"/>
+                <element inactive_on_update="false" label="Governance" sequence="1" value="GR"/>
+                <element inactive_on_update="false" label="networks" sequence="2" value="nw"/>
+                <element inactive_on_update="false" label="legal" sequence="3" value="lg"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
